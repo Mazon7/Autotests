@@ -30,10 +30,10 @@ def driver():
 # Fixture to restore DB by clicking on button and alert pop-up
 @pytest.fixture
 def restor_db(driver):
+    time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "#restoreDBBtn").click()
-
     # Switch to the alert
     alert = driver.switch_to.alert
     # Accept (click OK) the alert
     alert.accept()
-    time.sleep(2) # wait for the frontend to show notification about restoring DB
+    time.sleep(3) # wait for the frontend to show notification about restoring DB
