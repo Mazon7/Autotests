@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # COPY . .
 
 # Run your tests using pytest
-CMD ["/home/chrome/.local/bin/pytest"]
+CMD ["pytest"]
