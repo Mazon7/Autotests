@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entire project directory into the container
-COPY . .
+# COPY . .
 
 # Run your tests using pytest
-CMD ["pytest"]
+CMD ["/home/chrome/.local/bin/pytest"]

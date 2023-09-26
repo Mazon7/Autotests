@@ -12,6 +12,7 @@ def driver():
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=options)
 
     driver.get('https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all')
