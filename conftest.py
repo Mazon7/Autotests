@@ -9,10 +9,10 @@ def driver():
     options = webdriver.ChromeOptions()
     options.page_load_strategy = 'eager' # for not waiting the web page fully downloads
     # options.headless = True
-    options.add_argument('--disable-gpu')
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
+    # options.add_argument('--disable-gpu')
+    # options.add_argument('--headless')
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=options)
 
     driver.get('https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all')
@@ -30,7 +30,7 @@ def driver():
 # Fixture to restore DB by clicking on button and alert pop-up
 @pytest.fixture
 def restor_db(driver):
-    time.sleep(2)
+    time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, "#restoreDBBtn").click()
     # Switch to the alert
     alert = driver.switch_to.alert
