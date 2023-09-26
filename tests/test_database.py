@@ -5,7 +5,7 @@ from constants import *
 
 
 class TestDatabase:
-    def test_first(self, driver, restor_db):
+    def test_first(self, driver):
 
         # Set editor value
         editor_value = CommonMethods.set_editor_value(CommonMethods.get_customers)
@@ -28,7 +28,7 @@ class TestDatabase:
         assert table_headers.index('Address') == cell_values.index('Via Ludovico il Moro 22'), 'Other value is specified for Address column!'
 
 
-    def test_second(self, driver, restor_db):
+    def test_second(self, driver):
 
         # Set editor value
         editor_value = CommonMethods.set_editor_value(SecondTest.sql_query)
@@ -53,7 +53,7 @@ class TestDatabase:
         assert len(rows) == int(records_number)
 
 
-    def test_third(self, driver, restor_db):
+    def test_third(self, driver):
 
         # Set editor value
         editor_value = CommonMethods.set_editor_value(ThirdTest.sql_query)
@@ -83,7 +83,7 @@ class TestDatabase:
             assert cell_vaue == row_value
 
 
-    def test_fourth(self, driver, restor_db):
+    def test_fourth(self, driver):
 
         # Set editor value
         editor_value = CommonMethods.set_editor_value(FourTest.sql_query)
@@ -116,7 +116,7 @@ class TestDatabase:
 
 
     # Create View for Order table and Assert the Employee that processed max number of orders
-    def test_fifth(self, driver, restor_db):
+    def test_fifth(self, driver):
 
         # Set editor value
         editor_value = CommonMethods.set_editor_value(FifthTest.orders_view)
