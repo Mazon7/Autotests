@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM chromedriver-base
+FROM joyzoursky/python-chromedriver:3.9
 
 # Set the working directory in the container
 WORKDIR /tests
