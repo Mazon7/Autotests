@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 import re
-
+import time
 from constants import *
 
 
@@ -29,7 +29,7 @@ class TestDatabase:
 
 
     def test_second(self, driver, restor_db):
-
+        
         # Set editor value
         editor_value = CommonMethods.set_editor_value(SecondTest.sql_query)
 
