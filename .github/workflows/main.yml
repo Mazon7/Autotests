@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run Tests in Docker
-        run: docker run -v ./:/tests ghcr.io/tfk70/tests
+        run: docker run -v ./:/tests ghcr.io/mazon7/mytests
